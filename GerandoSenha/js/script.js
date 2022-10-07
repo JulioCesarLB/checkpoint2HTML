@@ -2,7 +2,7 @@ console.log("algo");
 const btnGerar = document.querySelector("#gerar");
 btnGerar.addEventListener("click", function () {
 
-    document.querySelector("#texto").setText= getSenha();
+    document.querySelector("#texto").textContent= getSenha();
 });
 
 
@@ -12,7 +12,7 @@ function getSenha() {
     let senha="";
 
     for(let i=0; i<20;i++){
-        senha+= letras[(Math.round(Math.random()*letras.length))];
+        senha+= letras[(Math.floor(Math.random()*letras.length))];
     }
     console.log("algo");
     return senha;
